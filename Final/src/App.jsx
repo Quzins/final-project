@@ -1,4 +1,4 @@
-import { useState, BrowserRouter, Routes, Route } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import axios from 'axios'
 import Teams from './team/Teams'
 import './App.css'
