@@ -18,7 +18,7 @@ function App() {
     <section className='pages'>
            <a href="http://">Комада</a>
            <a href="http://">Игроки</a>
-           <a href="http://">Ставки на спорт</a>
+           <a href="http://">Ставки на Футболл</a>
            <a href="http://">Матчи</a>
     </section>
     </>
