@@ -4,3 +4,7 @@
   justify-content: space-around;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.Headline{
+  display: flex;
+  align-items: flex-center;
+}
