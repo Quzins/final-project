@@ -15,7 +15,10 @@ function App() {
          </h4>
          </section>
          <section className='pages'>
-           <a href="http://"></a>
+           <a href="http://">Комада</a>
+           <a href="http://">Игроки</a>
+           <a href="http://">Ставки на спорт</a>
+           <a href="http://">Матчи</a>
          </section>
     </>
   )
