@@ -8,6 +8,8 @@ function App() {
   return (
     <>
     <section className='Headline'>
+        Goal-data
+    </section>
 
     <section className='info'> <h4> это современная независимая медиа-платформа,
         созданная болельщиками для болельщиков.Мы объединяем любителей футбола со всего мира,
@@ -19,7 +21,6 @@ function App() {
            <a href="http://">Игроки</a>
            <a href="http://">Ставки на спорт</a>
            <a href="http://">Матчи</a>
-    </section>
     </section>
     </>
 
