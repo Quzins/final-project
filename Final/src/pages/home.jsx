@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import './App.css'
+import './home.css'
+
 
 function App() {
   const  [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
            <a href="http://">Матчи</a>
     </section>
     </>
+
   )
 }
 
