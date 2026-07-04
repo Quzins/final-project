@@ -18,7 +18,7 @@ function App() {
     </h4>
     </section>
     <section className='pages'>
-           <Link to="/T staeams"></Link>
+           <Link to="/Teams"></Link>
            <Link to=""></Link>
            <Link to=""></Link>
            <Link to=""></Link>
