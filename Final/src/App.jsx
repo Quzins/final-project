@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import { useState } from 'react'
+=======
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import axios from 'axios'
+import Teams from './team/Teams'
+>>>>>>> cb02934b5a356958302064b3b99cb30112800965
 import './App.css'
 
 
 function App() {
+<<<<<<< HEAD
   const  [count, setCount] = useState(0)
 
   return (
@@ -23,6 +30,17 @@ function App() {
            <a href="http://">Матчи</a>
     </section>
 
+=======
+ 
+
+  return (
+    <>
+      <BrowserRouter>
+      <Routes>
+      <Route path="/teams" element={<Teams />}/>
+      </Routes>
+      </BrowserRouter>
+>>>>>>> cb02934b5a356958302064b3b99cb30112800965
     </>
 
   )

@@ -18,10 +18,10 @@ function App() {
     </h4>
     </section>
     <section className='pages'>
-           <Link to=/></Link>
-           <Link to=/></Link>
-           <Link to=/></Link>
-           <Link to=/></Link>
+           <Link to="/T staeams"></Link>
+           <Link to=""></Link>
+           <Link to=""></Link>
+           <Link to=""></Link>
     </section>
     </>
 
