@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <section className='Headline'>
-        Goal-data
+        <h1>Goal-Data</h1>
     </section>
 
     <section className='info'> <h4> это современная независимая медиа-платформа,
