@@ -16,6 +16,22 @@ header {
     font-weight: 600;
     color: #333;
   }
+  a {
+      display: inline-block;
+      align-self: center;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: wheat;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 30px;
+      
+      &:hover {
+        background-color: #e2b973;
+      }
+    }
 }
 
 section {
@@ -51,7 +67,6 @@ section {
       gap: 20px; 
     }
 
-    /* Стиль самой карточки команды */
     .team-card {
       background-color: #f9f9f9;
       border: 1px solid #e0e0e0;
@@ -95,20 +110,6 @@ section {
       }
     }
 
-    a {
-      display: inline-block;
-      align-self: center;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: wheat;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      
-      &:hover {
-        background-color: #e2b973;
-      }
-    }
+    
   }
 }

@@ -21,6 +21,10 @@ function Teams() {
           Тут вы можете посмотреть все команды учавствующие в Чемпионате Мира
           2026
         </h1>
+                  <Link to="/compound">Составы Команд
+                  
+                  </Link>
+
       </header>
 
       <section>
@@ -50,7 +54,6 @@ function Teams() {
             ))}
           </div>
 
-          <Link to="/compound">Compound</Link>
         </div>
       </section>
     </>
