@@ -1,20 +1,16 @@
-<<<<<<< HEAD
 import { useState } from 'react'
-=======
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, L } from 'react-router-dom'
 import axios from 'axios'
 import Teams from './team/Teams'
->>>>>>> cb02934b5a356958302064b3b99cb30112800965
 import './App.css'
 
 
 function App() {
-<<<<<<< HEAD
   const  [count, setCount] = useState(0)
 
-  return (
-    <>
-    <section className='Headline'>
+  // return (
+    // <>
+    {/* <section className='Headline'>
     
     </section>
     <section className='info'> <h4> это современная независимая медиа-платформа,
@@ -28,9 +24,9 @@ function App() {
            <a href="http://">Игроки</a>
            <a href="http://">Ставки на Футболл</a>
            <a href="http://">Матчи</a>
-    </section>
+    </section> */}
 
-=======
+
  
 
   return (
@@ -40,10 +36,10 @@ function App() {
       <Route path="/teams" element={<Teams />}/>
       </Routes>
       </BrowserRouter>
->>>>>>> cb02934b5a356958302064b3b99cb30112800965
     </>
 
   )
+
 }
 
 export default App
