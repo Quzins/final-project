@@ -8,9 +8,9 @@ import './App.css'
 function App() {
   const  [count, setCount] = useState(0)
 
-  // return (
-    // <>
-    {/* <section className='Headline'>
+ return (
+     <>
+     <section className='Headline'>
     
     </section>
     <section className='info'> <h4> это современная независимая медиа-платформа,
@@ -24,7 +24,7 @@ function App() {
            <a href="http://">Игроки</a>
            <a href="http://">Ставки на Футболл</a>
            <a href="http://">Матчи</a>
-    </section> */}
+    </section> */
 
 
  
