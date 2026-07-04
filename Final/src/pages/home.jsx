@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter } from "react-router";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import './App.css'
 
 
@@ -18,10 +18,10 @@ function App() {
     </h4>
     </section>
     <section className='pages'>
-           <a href="http://">Комада</a>
-           <a href="http://">Игроки</a>
-           <a href="http://">Ставки на спорт</a>
-           <a href="http://">Матчи</a>
+           <Link to=/></Link>
+           <Link to=/></Link>
+           <Link to=/></Link>
+           <Link to=/></Link>
     </section>
     </>
 
