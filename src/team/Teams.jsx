@@ -50,7 +50,7 @@ function Teams() {
             ))}
           </div>
 
-          <Link to="/compound">Compound</Link>
+            <Link to="/players">Перейти к игрокам</Link>
         </div>
       </section>
     </>
