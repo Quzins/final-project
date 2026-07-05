@@ -16,7 +16,7 @@ function App() {
   return (
     <>
     <section className='Headline'>
-    
+    <h1>Goal-Data</h1>
      </section>
      <section className='info'> <h4> это современная независимая медиа-платформа,
          созданная болельщиками для болельщиков.Мы объединяем любителей футбола со всего мира,
@@ -25,7 +25,7 @@ function App() {
      </section>
 
      <section className='pages'>
-            <a href="http://">Комада</a>
+            <a href="http://team/Teams">Комада</a>
             <a href="http://">Игроки</a>            
             <a href="http://">Ставки на Футболл</a>
             <a href="http://">Матчи</a>

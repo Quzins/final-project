@@ -1,4 +1,4 @@
-/* Общие настройки для темной спортивной темы */
+
 body {
   margin: 0;
   padding: 0;
@@ -11,7 +11,6 @@ body {
   min-height: 100vh;
 }
 
-/* Главный контейнер приложения */
 #root {
   max-width: 800px;
   width: 100%;
@@ -19,7 +18,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Секция заголовка (можно добавить фоновое фото стадиона) */
+
 .Headline {
   height: 150px;
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
@@ -31,18 +30,13 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.Headline::after {
-  content: "FOOTBALL MEDIA";
-  font-size: 2rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.Headline > h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  size: 100px;
 }
 
-/* Описание платформы */
 .info {
   background-color: #1e1e1e;
-  border-left: 5px solid #00ff87; /* Яркий футбольный зеленый акцент */
   padding: 20px;
   border-radius: 4px 12px 12px 4px;
   margin-bottom: 30px;
@@ -57,7 +51,7 @@ body {
   color: #e0e0e0;
 }
 
-/* Сетка для кнопок навигации */
+
 .pages {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -65,7 +59,7 @@ body {
   margin-bottom: 40px;
 }
 
-/* Стилизация ссылок (компонентов Link) */
+
 .pages a {
   display: flex;
   align-items: center;
@@ -81,7 +75,7 @@ body {
   text-align: center;
 }
 
-/* Эффект при наведении на кнопки */
+
 .pages a:hover {
   background-color: #00ff87;
   color: #000000;
@@ -90,7 +84,7 @@ body {
   border-color: #00ff87;
 }
 
-/* Эффект при нажатии */
+
 .pages a:active {
   transform: translateY(-1px);
 }
