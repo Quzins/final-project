@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 import Teams from './team/Teams'
-import './home.css'
+import './App.css'
 
 
 function App() {

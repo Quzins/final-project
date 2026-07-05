@@ -1,114 +1,96 @@
-* {
+/* Общие настройки для темной спортивной темы */
+body {
   margin: 0;
   padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Главный контейнер приложения */
+#root {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-header {
-  text-align: center;
-  background-color: wheat;
-  padding: 30px 20px;
-  margin-bottom: 40px;
-
-  h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    color: #333;
-  }
+/* Секция заголовка (можно добавить фоновое фото стадиона) */
+.Headline {
+  height: 150px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border-radius: 12px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-section {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 50px;
+.Headline::after {
+  content: "FOOTBALL MEDIA";
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-  .container {
-    max-width: 1200px; 
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+/* Описание платформы */
+.info {
+  background-color: #1e1e1e;
+  border-left: 5px solid #00ff87; /* Яркий футбольный зеленый акцент */
+  padding: 20px;
+  border-radius: 4px 12px 12px 4px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
+.info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
 
-    .continent-block {
-      margin-bottom: 40px;
-      
-      h1 {
-        font-size: 28px;
-        color: #222;
-        border-bottom: 3px solid wheat; 
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-      }
-    }
+/* Сетка для кнопок навигации */
+.pages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
 
+/* Стилизация ссылок (компонентов Link) */
+.pages a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid #333;
+  text-align: center;
+}
 
-    .teams-grid {
-      display: grid;
+/* Эффект при наведении на кнопки */
+.pages a:hover {
+  background-color: #00ff87;
+  color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 255, 135, 0.4);
+  border-color: #00ff87;
+}
 
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px; 
-    }
-
-    /* Стиль самой карточки команды */
-    .team-card {
-      background-color: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-
-      &:hover {
-        transform: translateY(-5px); 
-      }
-
-      h4 {
-        font-size: 18px;
-        margin-bottom: 8px;
-        color: #111;
-      }
-
-      p {
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 5px;
-        
-        span {
-          font-weight: bold;
-          color: #333;
-        }
-      }
-
-
-      img {
-        width: 100%;
-        max-width: 120px; 
-        height: auto;
-        aspect-ratio: 3 / 2;
-        object-fit: cover;
-        border-radius: 4px;
-        border: 1px solid #ddd;
-        margin-top: 10px;
-      }
-    }
-
-    a {
-      display: inline-block;
-      align-self: center;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: wheat;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      
-      &:hover {
-        background-color: #e2b973;
-      }
-    }
-  }
+/* Эффект при нажатии */
+.pages a:active {
+  transform: translateY(-1px);
 }
