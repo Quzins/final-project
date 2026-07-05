@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 import Teams from './team/Teams'
-import './App.css'
+import './home.css'
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
             <a href="http://">Игроки</a>            
             <a href="http://">Ставки на Футболл</a>
             <a href="http://">Матчи</a>
-     </section> */
+     </section>
       <BrowserRouter>
       <Routes>
       <Route path="/teams" element={<Teams />}/>
