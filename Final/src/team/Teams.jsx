@@ -53,6 +53,12 @@ function Teams() {
           <Link to="/compound">Compound</Link>
         </div>
       </section>
+      <section className='pages'>
+            <a href="http://">Главная</a>
+            <a href="http://">Игроки</a>            
+            <a href="http://">Ставки на Футболл</a>
+            <a href="http://">Матчи</a>
+      </section>
     </>
   );
 }
