@@ -29,7 +29,7 @@ function App() {
             <a href="http://">Игроки</a>            
             <a href="http://">Ставки на Футболл</a>
             <a href="http://">Матчи</a>
-     </section> */
+     </section>
       <BrowserRouter>
       <Routes>
       <Route path="/teams" element={<Teams />}/>
