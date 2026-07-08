@@ -20,8 +20,35 @@ button{
 }
 button:hover{
   border:2px solid rgb(184, 166, 134);
+  scale: 1.05;
 }
 button:active{
   background: #c7c7c7;
   border: 2px solid rgb(184, 166, 134);
+  scale: 0.95;
+}
+.teams{
+  display: flex;
+  gap:10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  scroll-behavior: smooth;
+  position: sticky;
+  top: 0;
+  background-color: wheat;
+  z-index: 100;
+}
+.teams button{
+  flex-shrink: 0;
+}
+.player-card{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.goalkeepers{
+  margin-top: 20px;
 }
