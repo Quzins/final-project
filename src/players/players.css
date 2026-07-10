@@ -1,6 +1,6 @@
 header {
   text-align: center;
-  background-color: wheat;
+  background-color: rgb(252, 211, 136);
   padding: 30px 20px;
   margin-bottom: 40px;
 
@@ -9,6 +9,7 @@ header {
     font-size: 30px;
     font-weight: 600;
     color: #333;
+    background-color: rgb(252, 211, 136);
   }
 }
 button{
@@ -36,7 +37,7 @@ button:active{
   scroll-behavior: smooth;
   position: sticky;
   top: 0;
-  background-color: wheat;
+  background-color: rgb(252, 211, 136);
   z-index: 100;
 }
 .teams button{
@@ -48,7 +49,30 @@ button:active{
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width:200px;
+  height:200px;
+  margin:20px;
+  padding:10px;
+  background-color: rgb(252, 211, 136);
 }
 .goalkeepers{
   margin-top: 20px;
+}
+img{
+  width:180px;
+  height:150px;
+}
+.playersSec{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h4{
+  font-size:16px;
+  scale:1.1;
+  background-color: rgb(252, 211, 136);
+}
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: wheat;
 }

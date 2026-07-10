@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { players } from "./playersData";
 import "./players.css";
+import playerImg from "../image/player.png";
 
 function Players() {
   const [selectedTeam, setSelectedTeam] = useState(null);
@@ -13,6 +14,8 @@ function Players() {
 { title: "Полузащитники", value: "Midfielder" },
 
 { title: "Нападающие", value: "Forward" },
+
+{ title: "Тренеры", value: "Manager" },
 
 ];
 
@@ -38,14 +41,16 @@ function Players() {
     <h2>{selectedTeam.team}</h2>
 
     {positions.map(pos => (
-      <div key={pos.value}>
+      <div key={pos.value} className="playersSec">
         <h2>{pos.title}</h2>
 
         {selectedTeam.players
           .filter(player => player.position === pos.value)
           .map(player => (
             <div key={player.id} className="player-card">
+              <img src={playerImg} alt={player.name} />
               <h4>{player.name}</h4>
+              <h4></h4>
             </div>
           ))}
 
