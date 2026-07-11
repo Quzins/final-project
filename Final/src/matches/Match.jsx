@@ -24,6 +24,7 @@ export default function Match({ allMatches }) {
       <header className="site-header">
         <div className="header-container">
           <span className="logo">🏆 ЧМ-2026</span>
+          <Link to="/">На Главную</Link>
           <Link to="/bets" className="nav-link">Перейти к ставкам</Link>
         </div>
       </header>
@@ -43,16 +44,16 @@ export default function Match({ allMatches }) {
           />
 
           <div className="groups">
-            <button 
-              className={activeGroup === "ALL" ? "active" : ""} 
+            <button
+              className={activeGroup === "ALL" ? "active" : ""}
               onClick={() => setActiveGroup("ALL")}
             >
               Все
             </button>
             {GROUPS.map((g) => (
-              <button 
-                key={g} 
-                className={activeGroup === g ? "active" : ""} 
+              <button
+                key={g}
+                className={activeGroup === g ? "active" : ""}
                 onClick={() => setActiveGroup(g)}
               >
                 {g}

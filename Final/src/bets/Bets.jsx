@@ -4,7 +4,7 @@ import "./Bets.css";
 
 function Bets({ allMatches, wallet, setWallet, walletOpened, setWalletOpened }) {
   const [selectedMatch, setSelectedMatch] = useState(null);
-  const [selectedOutcome, setSelectedOutcome] = useState(null); // 'home', 'draw', 'away'
+  const [selectedOutcome, setSelectedOutcome] = useState(null);
   const [bet, setBet] = useState(0);
   const [ageConfirmed, setAgeConfirmed] = useState(false);
   const [message, setMessage] = useState("Добро пожаловать! Подтвердите возраст и откройте кошелёк.");
@@ -76,7 +76,6 @@ function Bets({ allMatches, wallet, setWallet, walletOpened, setWalletOpened }) 
       return;
     }
 
-    // Симуляция результата матча на основе вероятностей
     const rand = Math.random();
     let finalOutcome = 'draw';
     if (rand < 0.45) finalOutcome = 'home';
@@ -127,7 +126,8 @@ function Bets({ allMatches, wallet, setWallet, walletOpened, setWalletOpened }) 
       <header className="site-header">
         <div className="header-container">
           <span className="logo">🏆 Букмекерская Контора</span>
-          <Link to="/" className="nav-link">В Матч-Центр</Link>
+          <Link to="/">На Главную</Link>
+          <Link to="/match" className="nav-link">В Матч-Центр</Link>
         </div>
       </header>
 
