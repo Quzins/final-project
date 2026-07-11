@@ -24,6 +24,7 @@ function Teams() {
                   <Link to="/compound">Составы Команд
                   
                   </Link>
+                  <Link to="/">На Главную</Link>
 
       </header>
 

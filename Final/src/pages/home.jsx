@@ -4,6 +4,9 @@ import "./home.css";
 function Home() {
   return (
     <div className="home">
+      <header>
+        
+      </header>
 
       <section className="hero">
         <div>
