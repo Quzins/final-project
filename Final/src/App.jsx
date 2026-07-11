@@ -4,12 +4,12 @@ import axios from 'axios'
 import Teams from './team/Teams'
 import Home from './pages/home'
 import Bets from './bets/Bets'
+import Match from './matches/Match'
 
 import './App.css'
 
 
 function App() {
-  const  [count, setCount] = useState(0)
 
 
 
@@ -25,6 +25,8 @@ function App() {
 
       <Route path="/teams" element={<Teams />}/>
       <Route path="/bets" element={<Bets />}/>
+      <Route path="/match" element={<Match />}/>
+
 
 
       </Routes>
