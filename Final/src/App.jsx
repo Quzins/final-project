@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 import Teams from './team/Teams'
 import Home from './pages/home'
+import Bets from './bets/Bets'
+
 import './App.css'
 
 
@@ -22,6 +24,8 @@ function App() {
       <Route path="/" element={<Home />}/>
 
       <Route path="/teams" element={<Teams />}/>
+      <Route path="/bets" element={<Bets />}/>
+
 
       </Routes>
       </BrowserRouter>

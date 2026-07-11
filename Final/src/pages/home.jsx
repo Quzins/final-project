@@ -20,6 +20,8 @@ function Home() {
           <div className="buttons">
             <Link to="/teams">Команды</Link>
             <Link to="/news">Новости</Link>
+            <Link to="/bets">Ставки</Link>
+
           </div>
         </div>
       </section>
