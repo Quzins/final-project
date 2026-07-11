@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f8f6f2;
+    font-family:Inter,sans-serif;
+    color:#3d352e;
+}
+
+header{
+    padding:25px 40px;
+}
+
+header a{
+    text-decoration:none;
+    color:white;
+    background:#b98b5f;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+header a:hover{
+    background:#9f744d;
+}
+
+
+
+body > div{
+    width:min(1300px,95%);
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    font-size:45px;
+    margin:30px 0;
+    color:#4d4036;
+}
+
+
+
+.teams{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:50px;
+}
+
+
+.teams button{
+    background:white;
+    color:#4d4036;
+    border:none;
+    padding:15px 25px;
+    border-radius:15px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+
+.teams button:hover{
+    background:#b98b5f;
+    color:white;
+    transform:translateY(-4px);
+}
+
+
+
+h2{
+    text-align:center;
+    color:#4d4036;
+    margin:30px 0 20px;
+}
+
+
+
+.playersSec{
+    background:white;
+    border-radius:22px;
+    padding:30px;
+    margin-bottom:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+
+.playersSec h2{
+    color:#b98b5f;
+    font-size:25px;
+    border-bottom:2px solid #f0e7dc;
+    padding-bottom:15px;
+}
+
+
+
+.playersSec{
+    display:flex;
+    flex-direction:column;
+}
+
+
+.playersSec > div{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
+    gap:20px;
+}
+
+
+
+
+.player-card{
+    background:#fdfbf8;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    transition:.3s;
+    border:1px solid #eee5da;
+}
+
+
+.player-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(185,139,95,.2);
+}
+
+
+.player-card img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    background:#f1ebe2;
+    border-radius:50%;
+    padding:10px;
+    margin-bottom:15px;
+}
+
+
+.player-card h4{
+    color:#4d4036;
+    font-size:18px;
+}
+
+
+
+
+.playersSec:has(.player-card:only-child){
+
+}
+
+
+
+
+@media(max-width:768px){
+
+h1{
+    font-size:34px;
+}
+
+
+.playersSec{
+    padding:20px;
+}
+
+
+.playersSec > div{
+    grid-template-columns:1fr;
+}
+
+
+.player-card img{
+    width:100px;
+    height:100px;
+}
+
+}

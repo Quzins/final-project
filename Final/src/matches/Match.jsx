@@ -1,60 +1,16 @@
-import React, { useMemo, useState } from "react";
-import { teams } from "../team/teamsData";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Match.css";
 
 const GROUPS = "ABCDEFGHIJKL".split("");
 
-function generateGroupMatches(groupTeams, groupIndex) {
-  const matches = [];
-  let dayOffset = groupIndex * 2 + 1;
-
-  for (let i = 0; i < groupTeams.length; i++) {
-    for (let j = i + 1; j < groupTeams.length; j++) {
-      matches.push({
-        home: groupTeams[i],
-        away: groupTeams[j],
-        date: `Day ${dayOffset}`,
-        time: ["13:00", "16:00", "19:00"][matches.length % 3],
-        status: "UPCOMING",
-      });
-    }
-  }
-
-  return matches;
-}
-
-export default function Match() {
+export default function Match({ allMatches }) {
   const [search, setSearch] = useState("");
   const [activeGroup, setActiveGroup] = useState("ALL");
 
-  const grouped = useMemo(() => {
-    const map = {};
-    teams.forEach((t) => {
-      if (!map[t.group]) map[t.group] = [];
-      map[t.group].push(t);
-    });
-    return map;
-  }, []);
-
-  const allMatches = useMemo(() => {
-    let matches = [];
-
-    Object.keys(grouped).forEach((groupKey, idx) => {
-      matches = [
-        ...matches,
-        ...generateGroupMatches(grouped[groupKey], idx),
-      ];
-    });
-
-    return matches;
-  }, [grouped]);
-
   const filtered = allMatches.filter((m) => {
-    const text =
-      m.home.name.toLowerCase() + " " + m.away.name.toLowerCase();
-
+    const text = m.home.name.toLowerCase() + " " + m.away.name.toLowerCase();
     const searchMatch = text.includes(search.toLowerCase());
-
     const groupMatch =
       activeGroup === "ALL" ||
       m.home.group === activeGroup ||
@@ -64,56 +20,80 @@ export default function Match() {
   });
 
   return (
-    <div className="app">
-      <div className="hero">
-        <h1>⚽ MATCH CENTER</h1>
-        <p>Groups • Fixtures • Football Tournament</p>
-      </div>
+    <>
+      <header className="site-header">
+        <div className="header-container">
+          <span className="logo">🏆 ЧМ-2026</span>
+          <Link to="/bets" className="nav-link">Перейти к ставкам</Link>
+        </div>
+      </header>
 
-      <div className="controls">
-        <input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search team..."
-        />
+      <div className="app">
+        <div className="hero">
+          <h1>⚽ МАТЧ-ЦЕНТР</h1>
+          <p>Групповой этап • Расписание матчей • Коэффициенты</p>
+        </div>
 
-        <div className="groups">
-          <button onClick={() => setActiveGroup("ALL")}>ALL</button>
-          {GROUPS.map((g) => (
-            <button key={g} onClick={() => setActiveGroup(g)}>
-              {g}
+        <div className="controls">
+          <input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Поиск команды..."
+            className="search-input"
+          />
+
+          <div className="groups">
+            <button 
+              className={activeGroup === "ALL" ? "active" : ""} 
+              onClick={() => setActiveGroup("ALL")}
+            >
+              Все
             </button>
+            {GROUPS.map((g) => (
+              <button 
+                key={g} 
+                className={activeGroup === g ? "active" : ""} 
+                onClick={() => setActiveGroup(g)}
+              >
+                {g}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="matches-grid">
+          {filtered.map((m) => (
+            <div className="match-card" key={m.id}>
+              <div className="match-header">
+                <span className="match-date">{m.date} в {m.time}</span>
+                <span className="status">{m.status}</span>
+              </div>
+
+              <div className="teams">
+                <div className="team">
+                  <img src={m.home.flag_url} alt={m.home.name} />
+                  <span>{m.home.name}</span>
+                </div>
+
+                <div className="vs">VS</div>
+
+                <div className="team">
+                  <img src={m.away.flag_url} alt={m.away.name} />
+                  <span>{m.away.name}</span>
+                </div>
+              </div>
+
+              <div className="match-coefs">
+                <div className="coef-item">П1: <span>{m.coefs.home}</span></div>
+                <div className="coef-item">Х: <span>{m.coefs.draw}</span></div>
+                <div className="coef-item">П2: <span>{m.coefs.away}</span></div>
+              </div>
+
+              <Link to="/bets" className="bet-match-btn">Сделать ставку</Link>
+            </div>
           ))}
         </div>
       </div>
-
-      <div className="matches-grid">
-        {filtered.map((m, idx) => (
-          <div className="match-card" key={idx}>
-            <div className="match-header">
-              <span>{m.date}</span>
-              <span className="status">{m.status}</span>
-            </div>
-
-            <div className="teams">
-              <div className="team">
-                <img src={m.home.flag_url} alt={m.home.name} />
-                <span>{m.home.name}</span>
-              </div>
-
-              <div className="vs">VS</div>
-
-              <div className="team">
-                <img src={m.away.flag_url} alt={m.away.name} />
-                <span>{m.away.name}</span>
-              </div>
-            </div>
-
-            <div className="time">{m.time}</div>
-          </div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }
-
