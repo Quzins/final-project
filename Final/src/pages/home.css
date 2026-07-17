@@ -168,18 +168,115 @@ body{
     line-height:1.6;
 }
 
-@media(max-width:768px){
 
-.hero{
-    padding:50px 25px;
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 45px 20px;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px; 
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .stats {
+        margin: 35px 0;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 20px 15px;
+        border-radius: 14px;
+    }
+
+    .stat-card h2 {
+        font-size: 32px;
+    }
+
+    .stat-card span {
+        font-size: 14px;
+    }
+
+    .about {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+    .about h2 {
+        font-size: 22px;
+    }
+
+    .about p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .features {
+        margin: 40px 0;
+    }
+
+    .features h2 {
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .feature {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+    .feature span {
+        font-size: 40px; 
+    }
+
+    .feature h3 {
+        margin: 15px 0 8px;
+        font-size: 18px;
+    }
+
+    .cards {
+        margin: 40px 0;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 25px 20px;
+        height: auto;
+        min-height: 160px;
+        border-radius: 16px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
 }
 
-.hero h1{
-    font-size:38px;
-}
-
-.hero p{
-    font-size:17px;
-}
-
+@media (max-width: 480px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
 }

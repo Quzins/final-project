@@ -217,3 +217,138 @@ hr {
 }
 .win .history-result { color: #10b981; }
 .lose .history-result { color: #ef4444; }
+
+
+
+
+@media (max-width: 768px) {
+    .app h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 19px;
+        margin: 25px 0 12px 0;
+    }
+
+    .wallet-section {
+        padding: 20px 15px;
+        margin-bottom: 25px;
+        border-radius: 16px;
+    }
+
+    .balance-display {
+        font-size: 20px;
+    }
+
+    .bets-matches-list {
+        padding: 15px;
+        border-radius: 16px;
+        gap: 10px;
+    }
+
+    .bet-row-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 15px 0;
+    }
+
+    .bet-row-teams {
+        font-size: 15px;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap; 
+        gap: 8px;
+    }
+
+    /* Находим этот блок внутри твоего @media (max-width: 768px) */
+.bet-row-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important; /* Жестко фиксируем 3 колонки */
+    gap: 6px;
+    width: 100%;
+}
+
+.coef-btn {
+    padding: 10px 2px !important; /* Уменьшаем боковые отступы до минимума */
+    font-size: 13px !important; /* Слегка уменьшаем шрифт цифр */
+    text-align: center;
+    white-space: nowrap; /* Запрещаем тексту внутри кнопок переноситься */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Если текст совсем не влезет, он аккуратно сократится */
+}
+
+
+    .btn-action {
+        padding: 14px;
+        font-size: 16px;
+        margin: 20px 0;
+        border-radius: 12px;
+    }
+
+    .bet-controls {
+        padding: 20px 15px;
+        border-radius: 16px;
+    }
+
+    .bet-display {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .btn-group {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+        gap: 8px;
+        width: 100%;
+    }
+
+    .btn-group button {
+        padding: 10px 12px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .history-list {
+        gap: 10px;
+    }
+
+    .history-card {
+        padding: 12px 15px;
+        border-radius: 12px;
+        gap: 10px;
+    }
+
+    .history-info h4 {
+        font-size: 15px;
+    }
+
+    .history-info p {
+        font-size: 12px;
+    }
+
+    .history-result {
+        font-size: 15px;
+        white-space: nowrap; 
+    }
+
+    hr {
+        margin: 25px 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .bet-row-actions {
+        grid-template-columns: 1fr; 
+    }
+    
+    .btn-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
